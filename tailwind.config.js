@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Manrope', "sans-serif"],
+        serif: ['Manrope', "sans-serif"],
+        mono: ['Manrope', "sans-serif"],
+      },
       colors: {
         primary: {
           main: "#2FAC4E",
