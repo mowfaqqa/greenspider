@@ -6,11 +6,31 @@ const About = () => {
   return (
     <div className="text-primary-main pb-10 px-10 md:px-0">
       <Header />
-      <div className="lg:pt-[121px] max-w-full mx-auto lg:px-[85px] lg:pb-[99px] text-primary-main">
-        <h1 className="md:text-[40px] text-xl font-bold mb-[25px] lg:mb-[49px]">
+      <div className="lg:pt-[121px] max-w-xl lg:max-w-full mx-auto lg:px-[85px] lg:pb-[99px] text-primary-main">
+        <div className="block lg:hidden mb-4">
+          <div className="flex justify-start">
+            <Image
+              src="/images/about-img-2.png"
+              width={194.36}
+              height={129.56}
+              alt="desert"
+              className="rounded-tl-[20px]"
+            />
+          </div>
+          <div className="flex justify-end mt-5">
+            <Image
+              src="/images/about-img-1.png"
+              width={194.36}
+              height={90}
+              alt="desert"
+              className="rounded-br-[20px]"
+            />
+          </div>
+        </div>
+        <h1 className="md:text-[40px] text-xl font-bold mb-[15px] lg:mb-[49px]">
           About Us
         </h1>
-        <p className="text-lg md:text-xl font-medium md:font-semibold">
+        <p className="md:text-xl font-medium md:font-semibold">
           Green Spider Consult (GSC) is a leading Nigerian environmental
           consulting firm incorporated in 2020 to provide a wide range of
           environmental services. <br />

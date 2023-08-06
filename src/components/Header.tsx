@@ -44,13 +44,13 @@ const Header = () => {
         </div>
       </nav>
       {/* small screen Nav */}
-      <nav className="flex justify-between items-center lg:hidden px-4">
+      <nav className="flex justify-between items-center lg:hidden px-4 py-[24px]">
         <div>
           <Image src="/assets/logo_v2.png" width={154} height={51} alt="logo" />
         </div>
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <Menu.Button className=" px-[17px] pt-[54px] font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-main">
+            <Menu.Button className="font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-main">
               <Bar size={32} />
             </Menu.Button>
           </div>
