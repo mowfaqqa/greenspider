@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="text-primary-main pb-10 px-10 md:px-0">
       <Header />
-      <div className="lg:pt-[121px] max-w-xl lg:max-w-full mx-auto lg:px-[85px] lg:pb-[99px] text-primary-main">
+      <div className="lg:pt-[121px] max-w-xl lg:max-w-[1440px] mx-auto lg:px-[85px] lg:pb-[99px] text-primary-main">
         <div className="block lg:hidden mb-4">
           <div className="flex justify-start">
             <Image
@@ -53,8 +53,8 @@ const About = () => {
           environmental issues.
         </p>
       </div>
-      <div className="max-w-full mx-auto">
-        <div className="md:flex md:justify-start lg:px-[80px]">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="md:flex md:justify-start lg:px-[75px]">
           <div className="lg:w-[631px]">
             <h3 className="text-lg font-bold lg:text-[40px] mb-3">Vision</h3>
             <p className="md:font-semibold md:text-[24px]">

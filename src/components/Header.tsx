@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div>
       {/* large screen Nav */}
-      <nav className="hidden max-w-[1440px] mx-auto lg:flex justify-between items-center py-[54px] px-[45px]">
+      <nav className="hidden max-w-[1440px] mx-auto lg:flex justify-between items-center py-[54px] px-[75px]">
         <div>
           <Image
             src="/assets/greenspider-logo.svg"
