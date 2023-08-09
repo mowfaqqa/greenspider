@@ -127,7 +127,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="carousel mt-[74px] py-[30px]">
+        <div className="carousel lg:hidden block mt-[74px] py-[30px]">
           <Slider {...settings}>
             <Image
               src="/assets/cam-01.png"
