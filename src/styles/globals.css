@@ -4,3 +4,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Carousel.css */
+
+/* .carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.carousel-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+*/
+
+/* .carousel-items {
+  margin: auto;
+ transition: transform 0.3s ease-in-out;
+}
+.carousel-item { 
+  padding: 10px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1.1);
+} */
