@@ -200,7 +200,7 @@ const Items = [
     ],
   },
   {
-    img: "/icons/logo-4.svg",
+    img: "/icons/logo-5.png",
     title: "WASTE MANAGEMENT",
     description: [
       " Pollution Management and Ccontrol",
@@ -208,7 +208,7 @@ const Items = [
     ],
   },
   {
-    img: "/icons/logo-4.svg",
+    img: "/icons/logo-6.png",
     title: "SPECIALIZED ENVIROMENTAL SERVICES",
     description: [
       " Air Quality Assessment",
@@ -217,7 +217,7 @@ const Items = [
     ],
   },
   {
-    img: "/icons/logo-4.svg",
+    img: "/icons/logo-7.png",
     title: "COMMUNITY MOBILIZATION AND TRAINING",
     description: [
       " Development of Public Mobilization and Communication Strategy",
