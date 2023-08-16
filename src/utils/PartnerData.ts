@@ -1,6 +1,7 @@
 export const PPSData = [
   {
     id: "bukar_hassan",
+    next: "sani_mamman",
     name: "Dr. Bukar Hassan",
     post: "Chairman / Chief Executive Officer",
     desc: "In addition, he has obtained a number of professional certificates from various International Academic and Research Institutions and these include; Certificate in the use of Meteosat and NOAA AVHRR and GIS for Rainfall and Vegetation Monitoring and Evaluation from Silsoe College, University of Bedford, UK; Certificate in Tropical Soil Management from University of Dresden, Germany; Certificate in Combating Desertification from Centre for Research in Desertification Control, Valencia, Spain.",
@@ -12,6 +13,7 @@ export const PPSData = [
   },
   {
     id: "sani_mamman",
+    next: "jauro_jibrin",
     name: "Sani Mamman Katsina",
     post: "Executive Director - Project Development",
     desc: "Mr. Katsina, a DAAD Fellow holds a Bsc degree in Geography from Bayero University Kano; Msc in Soil Science (Pedology and Soil Survey) from University of Reading, UK; Post Graduate Certificate in Biogeography and Regional Assessment (Environmental Statistics and Data Management) from University of Saarland, Germany; Certificate in Eco-Restoration and Biodiversity Protection from Gansu Desert Control Research Institute, China, Certificate in Combating Desertification Technology from Institute of Ecology and Geography, China and Certificate in World Soils Assessment from ISRIC, Wageningen, the Netherlands. Other professional programmes and training attended and certificates obtained include, Environmental Management Policy (USA); Scientific Instrumentation (Surrey UK); WHO Air Quality Monitoring (Nigeria); Farmers’ Managed Natural Regeneration (Niger Republic); Strategic Planning and Use of Geometric Tools for GGW Implementation (Sudan); Remote Sensing and GIS Training (Tunisia); Combating Desertification Technology (Turkey); and Combating Desertification and Sand and Dust Storm Management (Iran).",
@@ -23,6 +25,7 @@ export const PPSData = [
   },
   {
     id: "jauro_jibrin",
+    next: "saminu_ado",
     name: "Jauro Jibin",
     post: "Executive Director - Finance and Administration",
     summary:
@@ -34,6 +37,7 @@ export const PPSData = [
   },
   {
     id: "saminu_ado",
+    next: "isa_waziri",
     name: "Dr Saminu Ado",
     post: "Executive Director - Afforestation & Extension Service",
     summary:
@@ -45,6 +49,7 @@ export const PPSData = [
   },
   {
     id: "yarima_peter",
+    next: "yarima_peter",
     name: "Dr. Yarima Peter Tarfa",
     post: "Executive Director - Climate Change and Sustainable Development",
     summary:
@@ -56,6 +61,7 @@ export const PPSData = [
   },
   {
     id: "isa_waziri",
+    next: "engr_aminu",
     name: "Barr. Isa Waziri",
     post: "(Company Secretary /Legal Adviser)",
     summary:

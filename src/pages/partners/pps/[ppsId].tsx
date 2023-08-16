@@ -3,6 +3,7 @@ import { PPSData } from "@/utils/PartnerData";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import { ArrowLeft, ArrowRight } from "react-feather";
 
 const PPSDetails = () => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const PPSDetails = () => {
                 </span>
               </div>
             </div>
-            <p className="font-medium text-lg text-justify w-[335px] lg:w-full mx-4 mt-[40px]">
+            <p className="font-medium text-lg text-justify w-[335px] lg:w-full mx-4 mt-[45px]">
               {ppsDetail?.desc}
             </p>
           </div>
@@ -55,8 +56,24 @@ const PPSDetails = () => {
             </div>
           </div>
         </div>
-        <div className="font-medium text-lg w-[335px] lg:w-full mx-4 px-4 text-justify mt-5 lg:mt-[140px]">
+        <div className="font-medium text-lg w-[338px] lg:w-full mx-4 px-3 text-justify mt-5 lg:mt-[140px]">
           {ppsDetail?.further_desc}
+        </div>
+        <div className="flex justify-between items-center mt-8 px-5 pb-5">
+          <button
+            onClick={() => router.back()}
+            className="flex items-center text-black text-[23px] lg:text-[40px] font-semibold"
+          >
+            {" "}
+            <ArrowLeft className="text-[23px] lg:text-[40px]" /> Back
+          </button>
+          <button
+            onClick={() => router.push(`/partners/pps/${ppsDetail?.next}`)}
+            className="flex items-center text-black text-[23px] lg:text-[40px] font-semibold"
+          >
+            {" "}
+            Next <ArrowRight className="text-[23px] lg:text-[40px]"/> 
+          </button>
         </div>
       </div>
     </div>

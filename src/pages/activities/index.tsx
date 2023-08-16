@@ -4,55 +4,11 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import React from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Activities = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    // prevArrow: (
-    //   <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
-    //     <ChevronLeft size={20} />
-    //   </button>
-    // ),
-    // nextArrow: (
-    //   <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
-    //     <ChevronRight size={20} />
-    //   </button>
-    // ),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
     <div>
       <Header />
@@ -63,9 +19,8 @@ const Activities = () => {
               Main Activities
             </h3>
             <p className="md:font-semibold md:text-[24px]">
-              Our vision is to provide excellent and highest quality
-              environmental services to an array of clients without compromising
-              high degree of professional ethics and core values.
+              In the process of managing a wide range of environmental problems,
+              GSC has developed expertise in the following key areas.
             </p>
           </div>
 
@@ -132,29 +87,57 @@ const Activities = () => {
       {/* <div>
         <Carousel items={Items} />
       </div> */}
-      <div className="mt-[80%] lg:mt-[5%] lg:px-[75px] px-3">
-        <Slider {...settings}>
+      <div className="swiper-container mt-[80%] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={8}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          breakpoints={{
+            400: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
+        >
           {Items.map((item: any, index: number) => (
-            <Card
-              key={index}
-              className={`carousel-item lg:w-[253px] lg:h-[269px] mt-5 flex-col p-5`}
-            >
-              <div className="flex flex-col  justify-center items-center">
-                <Image src={item.img} width={30} height={30} alt="icon" />
-                <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
-                  {item.title}
-                </h2>
-                <ul>
-                  {item.description.map((desc: any, index: number) => (
-                    <li key={index} className="text-[10px]">
-                      {desc}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Card>
+            <SwiperSlide key={index}>
+              <Card
+                className={`carousel-item lg:w-[253px] mb-4 lg:h-[269px] mt-5 flex-col p-5`}
+              >
+                <div className="flex flex-col">
+                  <Image
+                    src={item.img}
+                    width={30}
+                    height={30}
+                    alt="icon"
+                    className="block mx-auto mb-3"
+                  />
+                  <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
+                    {item.title}
+                  </h2>
+                  <ul>
+                    {item.description.map((desc: any, index: number) => (
+                      <li key={index} className="text-[10px]">
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Card>
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </div>
   );
@@ -226,3 +209,14 @@ const Items = [
     ],
   },
 ];
+
+// prev: (
+// <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
+//   <ChevronLeft size={20} />
+// </button>
+// ),
+// next: (
+// <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
+//   <ChevronRight size={20} />
+// </button>
+// ),

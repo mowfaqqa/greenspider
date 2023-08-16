@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { Transition, Menu } from "@headlessui/react";
 import { Fragment } from "react";
 import Slider from "react-slick";
-import Head from "next/head";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -17,28 +17,41 @@ export default function Home() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+
   return (
     <>
-      <Head>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-      </Head>
       <main>
         {/* large screen Nav */}
         <nav className="hidden max-w-[1440px] mx-auto lg:flex justify-center items-center py-[54px]">
@@ -121,13 +134,13 @@ export default function Home() {
               <h1 className="font-semibold text-[18.2px] lg:text-[64px] text-primary-main">
                 Green Spider <br /> Consult Limited
               </h1>
-              <span className="text-[9px] lg:text-[32px]">
-                Protecting the Environment For Humanity
+              <span className="text-[9px] leading-normal lg:text-[32px]">
+                Protecting the Enviroment For Sustainable <br />Development
               </span>
             </div>
           </div>
         </div>
-        <div className="carousel lg:hidden block mt-[74px] py-[30px] h-[130px]">
+        <div className="lg:hidden block mt-[74px] py-[30px]">
           <Slider {...settings}>
             <Image
               src="/assets/cam-01.png"
@@ -150,7 +163,7 @@ export default function Home() {
               alt="Image 3"
               width={129.33}
               height={32.75}
-              className="px-2 h-[129px]"
+              className="px-2"
             />
           </Slider>
         </div>
