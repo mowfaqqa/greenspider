@@ -44,7 +44,7 @@ const Header = () => {
         </div>
       </nav>
       {/* small screen Nav */}
-      <nav className="flex justify-between items-center lg:hidden px-4 py-[24px]">
+      <nav className="flex justify-between  items-center lg:hidden px-4 py-[24px]">
         <div>
           <Image src="/assets/logo_v2.png" width={154} height={51} alt="logo" />
         </div>
@@ -63,25 +63,27 @@ const Header = () => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute right-0 mt-2 w-56 px-4 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute right-0 mt-2 w-64 py-3 px-4 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-30 focus:outline-none">
               <div className="px-1 py-1 flex flex-col">
                 {navigation.map((link, index) => (
-                  <Menu.Item key={index}>
-                    {({ active }) => (
-                      <Link href={link.href} passHref>
-                        <span
-                          className={classNames(
-                            router.asPath === link.href
-                              ? "text-secondary-hover"
-                              : "text-primary-main",
-                            "font-semibold py-3 text-base hover:text-secondary-hover"
-                          )}
-                        >
-                          {link.name}
-                        </span>
-                      </Link>
-                    )}
-                  </Menu.Item>
+                  <div key={index} className="border-b py-3 border-gray-400">
+                    <Menu.Item >
+                      {({ active }) => (
+                        <Link href={link.href} passHref>
+                          <span
+                            className={classNames(
+                              router.asPath === link.href
+                                ? "text-secondary-hover"
+                                : "text-primary-main",
+                              "font-semibold text-xl hover:text-secondary-hover "
+                            )}
+                          >
+                            {link.name}
+                          </span>
+                        </Link>
+                      )}
+                    </Menu.Item>
+                  </div>
                 ))}
               </div>
             </Menu.Items>
