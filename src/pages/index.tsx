@@ -137,8 +137,7 @@ export default function Home() {
                 Green Spider <br /> Consult Limited
               </h1>
               <span className="text-[9px] leading-normal lg:text-[32px]">
-                Protecting the Enviroment For Sustainable <br />
-                Development
+                Protecting the Enviroment For Sustainable Development
               </span>
             </div>
           </div>
