@@ -7,8 +7,29 @@ import { ChevronLeft, ChevronRight } from "react-feather";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const Activities = () => {
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 4 },
+  };
+  const PrevArrow = (
+    <button className="w-[41px] h-[41px] pl-2 bg-primary-main text-white rounded-full">
+      <ChevronLeft size={20} />
+    </button>
+  );
+  const NextArrow = (
+    <button className="w-[41px] flex justify-center items-center h-[41px] bg-primary-main text-white rounded-full">
+      <ChevronRight size={20} />
+    </button>
+  );
   return (
     <div>
       <Header />
@@ -88,56 +109,38 @@ const Activities = () => {
         <Carousel items={Items} />
       </div> */}
       <div className="swiper-container mt-[80%] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={8}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          breakpoints={{
-            400: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 50,
-            },
-          }}
-        >
-          {Items.map((item: any, index: number) => (
-            <SwiperSlide key={index}>
-              <Card
-                className={`carousel-item lg:w-[253px] mb-4 lg:h-[269px] mt-5 flex-col p-5`}
-              >
-                <div className="flex flex-col">
-                  <Image
-                    src={item.img}
-                    width={30}
-                    height={30}
-                    alt="icon"
-                    className="block mx-auto mb-3"
-                  />
-                  <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
-                    {item.title}
-                  </h2>
-                  <ul>
-                    {item.description.map((desc: any, index: number) => (
-                      <li key={index} className="text-[10px]">
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Card>
-            </SwiperSlide>
+        <AliceCarousel
+          disableDotsControls
+          responsive={responsive}
+          items={Items.map((item: any, index: number) => (
+            <Card
+              key={index}
+              className={`carousel-item lg:w-[253px] mb-4 h-[269px] mt-5 flex-col p-5`}
+            >
+              <div className="flex flex-col">
+                <Image
+                  src={item.img}
+                  width={30}
+                  height={30}
+                  alt="icon"
+                  className="block mx-auto mb-3"
+                />
+                <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
+                  {item.title}
+                </h2>
+                <ul>
+                  {item.description.map((desc: any, index: number) => (
+                    <li key={index} className="text-[10px]">
+                      {desc}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Card>
           ))}
-        </Swiper>
+          renderPrevButton={() => PrevArrow}
+          renderNextButton={() => NextArrow}
+        />
       </div>
     </div>
   );
@@ -210,13 +213,12 @@ const Items = [
   },
 ];
 
-// prev: (
-// <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
-//   <ChevronLeft size={20} />
-// </button>
-// ),
-// next: (
-// <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
-//   <ChevronRight size={20} />
-// </button>
-// ),
+{
+  /* <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
+  <ChevronLeft size={20} />
+</button>
+
+<button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
+  <ChevronRight size={20} />
+</button> */
+}

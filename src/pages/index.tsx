@@ -17,10 +17,11 @@ export default function Home() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     speed: 2000,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
       {
@@ -136,9 +137,9 @@ export default function Home() {
               <h1 className="font-semibold text-[18.2px] lg:text-[64px] text-primary-main">
                 Green Spider <br /> Consult Limited
               </h1>
-              <span className="text-[9px] leading-normal lg:text-[32px]">
+              <p className="text-[9px] leading-tight lg:text-[32px]">
                 Protecting the Enviroment For Sustainable Development
-              </span>
+              </p>
             </div>
           </div>
         </div>
