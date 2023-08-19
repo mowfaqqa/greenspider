@@ -150,7 +150,7 @@ export default function Home() {
               alt="Image 1"
               width={129.33}
               height={72.75}
-              className="px-2"
+              className="px-2 h-[28vh]"
             />
 
             <Image
@@ -158,7 +158,7 @@ export default function Home() {
               alt="Image 2"
               width={129.33}
               height={72.75}
-              className="px-2"
+              className="px-2 h-[28vh]"
             />
 
             <Image
@@ -166,7 +166,7 @@ export default function Home() {
               alt="Image 3"
               width={129.33}
               height={32.75}
-              className="px-2 h-[30vh]"
+              className="px-2 h-[28vh]"
             />
           </Slider>
         </div>
