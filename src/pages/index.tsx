@@ -19,7 +19,7 @@ export default function Home() {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    speed: 2000,
+    speed: 3000,
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
@@ -166,7 +166,7 @@ export default function Home() {
               alt="Image 3"
               width={129.33}
               height={32.75}
-              className="px-2"
+              className="px-2 h-[30vh]"
             />
           </Slider>
         </div>

@@ -12,6 +12,10 @@ const Header = () => {
     return classes.filter(Boolean).join(" ");
   };
 
+  const searchString = "/partners"; // Replace with the string you want to check for
+  const includesString = router.asPath.includes(searchString);
+
+  console.log(router.asPath, "PATH");
   return (
     <div>
       {/* large screen Nav */}
@@ -30,7 +34,8 @@ const Header = () => {
               <Link href={link.href} passHref>
                 <span
                   className={classNames(
-                    router.asPath === link.href
+                    router.asPath === link.href ||
+                      router.asPath === "/partners/pps"
                       ? "text-secondary-hover"
                       : "text-primary-main",
                     "font-semibold text-xl hover:text-secondary-hover"
@@ -67,12 +72,12 @@ const Header = () => {
               <div className="px-1 py-1 flex flex-col">
                 {navigation.map((link, index) => (
                   <div key={index} className="border-b py-3 border-gray-400">
-                    <Menu.Item >
+                    <Menu.Item>
                       {({ active }) => (
                         <Link href={link.href} passHref>
                           <span
                             className={classNames(
-                              router.asPath === link.href
+                              router.asPath === link.href || includesString
                                 ? "text-secondary-hover"
                                 : "text-primary-main",
                               "font-semibold text-xl hover:text-secondary-hover "

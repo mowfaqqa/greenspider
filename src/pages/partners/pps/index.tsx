@@ -40,7 +40,7 @@ const PPS = () => {
                 <div className="green-bg bg-[#2FAC4E] w-[297px] h-[223px] rounded-[30px]" />
                 <div className="absolute lg:right-[0.04%] lg:top-[6.5%]">
                   <Image
-                    src={data.img}
+                    src={data?.img}
                     width={275}
                     height={396}
                     alt="pps partner"
@@ -51,7 +51,7 @@ const PPS = () => {
                 <div className="green-bg bg-[#2FAC4E] w-[93px] h-[70px] rounded-[5px]" />
                 <div className="absolute lg:right-[0.04%] lg:top-[6.5%]">
                   <Image
-                    src={data.img}
+                    src={data?.img}
                     width={86}
                     height={124}
                     alt="pps partner"
