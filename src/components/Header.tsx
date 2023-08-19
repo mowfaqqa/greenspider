@@ -13,10 +13,9 @@ const Header = () => {
     return classes.filter(Boolean).join(" ");
   };
 
-  const searchString = "/partners"; // Replace with the string you want to check for
+  const searchString = "/partners"; 
   const includesString = router.asPath.includes(searchString);
 
-  console.log(router.asPath, "PATH");
   return (
     <div>
       {/* large screen Nav */}

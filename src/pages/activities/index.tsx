@@ -186,7 +186,7 @@ const Items = [
     ],
   },
   {
-    img: "/icons/logo-5.png",
+    img: "/icons/logo-5.jpg",
     title: "WASTE MANAGEMENT",
     description: [
       " Pollution Management and Ccontrol",
@@ -194,7 +194,7 @@ const Items = [
     ],
   },
   {
-    img: "/icons/logo-6.png",
+    img: "/icons/logo-6.jpg",
     title: "SPECIALIZED ENVIROMENTAL SERVICES",
     description: [
       " Air Quality Assessment",
@@ -203,7 +203,7 @@ const Items = [
     ],
   },
   {
-    img: "/icons/logo-7.png",
+    img: "/icons/logo-7.jpg",
     title: "COMMUNITY MOBILIZATION AND TRAINING",
     description: [
       " Development of Public Mobilization and Communication Strategy",
@@ -213,12 +213,3 @@ const Items = [
   },
 ];
 
-{
-  /* <button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
-  <ChevronLeft size={20} />
-</button>
-
-<button className="w-[41px] h-[41px] bg-primary-main text-white rounded-full">
-  <ChevronRight size={20} />
-</button> */
-}
