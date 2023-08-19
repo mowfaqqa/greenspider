@@ -75,40 +75,40 @@ const Activities = () => {
             <div className=" absolute lg:top-[73%] lg:left-[62%] h-[40px] w-[40px] bg-primary-main rounded-br-[7px]" />
           </div>
           <div className="block md:hidden">
-            <div className="absolute top-[47%] left-[12%]">
+            <div className="absolute top-[44%] left-[0%]">
               <Image
                 src="/images/activities-img-1.svg"
                 width={116.32}
                 height={77.56}
                 alt="activities"
+                className="w-[55vw]"
               />
             </div>
-            <div className="absolute top-[45.8%] left-[31%] h-[18px] w-[18px] bg-primary-main rounded-br-[7px]" />
-            <div className="absolute top-[40%] left-[31%]">
+            <div className="absolute top-[43.8%] left-[39%] h-[18px] w-[18px] bg-primary-main rounded-br-[7px]" />
+            <div className="absolute top-[38%] left-[36%]">
               <Image
                 src="/images/activities-img-2.svg"
                 width={173.58}
                 height={97.64}
                 alt="activities"
+                className="w-[65vw]"
               />
             </div>
 
-            <div className="absolute top-[52%] left-[32%]">
+            <div className="absolute top-[56%] left-[36%]">
               <Image
                 src="/images/activities-img-3.svg"
                 width={134.34}
                 height={116.34}
                 alt="activities"
+                className="w-[55vw]"
               />
             </div>
-            <div className="absolute top-[57%] left-[31%] h-[18px] w-[18px] bg-primary-main rounded-br-[7px]" />
+            <div className="absolute top-[63%] left-[39%] h-[18px] w-[18px] bg-primary-main rounded-br-[7px]" />
           </div>
         </div>
       </div>
-      {/* <div>
-        <Carousel items={Items} />
-      </div> */}
-      <div className="swiper-container mt-[80%] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
+      <div className="swiper-container mt-[60vh] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
         <AliceCarousel
           disableDotsControls
           responsive={responsive}
@@ -212,4 +212,3 @@ const Items = [
     ],
   },
 ];
-
