@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { Fragment } from "react";
 import { Menu as Bar } from "react-feather";
+import Activities from "../pages/activities/index";
 
 const Header = () => {
   const router = useRouter();
@@ -29,23 +30,74 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center justify-center flex-1">
-          {navigation.map((link, index) => (
-            <div key={index} className="mx-[30px]">
-              <Link href={link.href} passHref>
-                <span
-                  className={classNames(
-                    router.asPath === link.href ||
-                      router.asPath === "/partners/pps"
-                      ? "text-secondary-hover"
-                      : "text-primary-main",
-                    "font-semibold text-xl hover:text-secondary-hover"
-                  )}
-                >
-                  {link.name}
-                </span>
-              </Link>
-            </div>
-          ))}
+          <div className="mx-[30px]">
+            <Link href="/" passHref>
+              <span
+                className={classNames(
+                  router.asPath === "/"
+                    ? "text-secondary-hover"
+                    : "text-primary-main",
+                  "font-semibold text-xl hover:text-secondary-hover"
+                )}
+              >
+                Home
+              </span>
+            </Link>
+          </div>
+          <div className="mx-[30px]">
+            <Link href="/about" passHref>
+              <span
+                className={classNames(
+                  router.asPath === "/about"
+                    ? "text-secondary-hover"
+                    : "text-primary-main",
+                  "font-semibold text-xl hover:text-secondary-hover"
+                )}
+              >
+                About Us
+              </span>
+            </Link>
+          </div>
+          <div className="mx-[30px]">
+            <Link href="/activities" passHref>
+              <span
+                className={classNames(
+                  router.asPath === "/activities"
+                    ? "text-secondary-hover"
+                    : "text-primary-main",
+                  "font-semibold text-xl hover:text-secondary-hover"
+                )}
+              >
+                Main Activities
+              </span>
+            </Link>
+          </div>
+          <div className="mx-[30px]">
+            <Link href="/partners" passHref>
+              <span
+                className={classNames(
+                  includesString ? "text-secondary-hover" : "text-primary-main",
+                  "font-semibold text-xl hover:text-secondary-hover"
+                )}
+              >
+                Principal Partners
+              </span>
+            </Link>
+          </div>
+          <div className="mx-[30px]">
+            <Link href="/technical_experts" passHref>
+              <span
+                className={classNames(
+                  router.asPath === "/technical_experts"
+                    ? "text-secondary-hover"
+                    : "text-primary-main",
+                  "font-semibold text-xl hover:text-secondary-hover"
+                )}
+              >
+                Technical Experts
+              </span>
+            </Link>
+          </div>
         </div>
       </nav>
       {/* small screen Nav */}
@@ -70,26 +122,96 @@ const Header = () => {
           >
             <Menu.Items className="absolute right-0 mt-2 w-64 py-3 px-4 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-30 focus:outline-none">
               <div className="px-1 py-1 flex flex-col">
-                {navigation.map((link, index) => (
-                  <div key={index} className="border-b py-3 border-gray-400">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href={link.href} passHref>
-                          <span
-                            className={classNames(
-                              router.asPath === link.href || includesString
-                                ? "text-secondary-hover"
-                                : "text-primary-main",
-                              "font-semibold text-xl hover:text-secondary-hover "
-                            )}
-                          >
-                            {link.name}
-                          </span>
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </div>
-                ))}
+                <div className="border-b py-3 border-gray-400">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="/" passHref>
+                        <span
+                          className={classNames(
+                            router.asPath === "/"
+                              ? "text-secondary-hover"
+                              : "text-primary-main",
+                            "font-semibold py-3 text-xl hover:text-secondary-hover"
+                          )}
+                        >
+                          Home
+                        </span>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </div>
+                <div className="border-b py-3 border-gray-400">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="/about" passHref>
+                        <span
+                          className={classNames(
+                            router.asPath === "/about"
+                              ? "text-secondary-hover"
+                              : "text-primary-main",
+                            "font-semibold py-3 text-xl hover:text-secondary-hover"
+                          )}
+                        >
+                          About Us
+                        </span>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </div>
+                <div className="border-b py-3 border-gray-400">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="/activities" passHref>
+                        <span
+                          className={classNames(
+                            router.asPath === "/activities"
+                              ? "text-secondary-hover"
+                              : "text-primary-main",
+                            "font-semibold py-3 text-xl hover:text-secondary-hover"
+                          )}
+                        >
+                          Main Activities
+                        </span>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </div>
+                <div className="border-b py-3 border-gray-400">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="/partners" passHref>
+                        <span
+                          className={classNames(
+                            includesString
+                              ? "text-secondary-hover"
+                              : "text-primary-main",
+                            "font-semibold py-3 text-xl hover:text-secondary-hover"
+                          )}
+                        >
+                          Principal Partners
+                        </span>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </div>
+                <div className="border-b py-3 border-gray-400">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="/technical_experts" passHref>
+                        <span
+                          className={classNames(
+                            router.asPath === "/technical_experts"
+                              ? "text-secondary-hover"
+                              : "text-primary-main",
+                            "font-semibold py-3 text-xl hover:text-secondary-hover"
+                          )}
+                        >
+                          Technical Experts
+                        </span>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </div>
               </div>
             </Menu.Items>
           </Transition>
