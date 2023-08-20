@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import Dropdown from "@/components/Dropdown";
 
 const Activities = () => {
   const responsive = {
@@ -31,7 +32,7 @@ const Activities = () => {
     </button>
   );
   return (
-    <div>
+    <div className="pb-[3rem]">
       <Header />
       <div className="lg:py-[121px] lg:max-w-[1440px] mx-auto lg:px-[75px] px-5 text-primary-main">
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -108,39 +109,42 @@ const Activities = () => {
           </div>
         </div>
       </div>
-      <div className="swiper-container mt-[60vh] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
-        <AliceCarousel
-          disableDotsControls
-          responsive={responsive}
-          items={Items.map((item: any, index: number) => (
-            <Card
-              key={index}
-              className={`carousel-item lg:w-[253px] mb-4 h-[269px] mt-5 flex-col p-5`}
-            >
-              <div className="flex flex-col">
-                <Image
-                  src={item.img}
-                  width={30}
-                  height={30}
-                  alt="icon"
-                  className="block mx-auto mb-3"
-                />
-                <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
+      <div className="max-w-[250px] lg:max-w-[1440px] mx-auto">
+        <div className="swiper-container mt-[60vh] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
+          <AliceCarousel
+            disableDotsControls
+            responsive={responsive}
+            items={Items.map((item: any, index: number) => (
+              <Card
+                key={index}
+                className={`carousel-item w-[200px] lg:w-[253px] mb-4 h-[269px] mt-5 flex-col border border-primary-main shadow-lg`}
+              >
+                <div className="flex flex-col">
+                  <Image
+                    src={item.img}
+                    width={30}
+                    height={30}
+                    alt="icon"
+                    className="block mx-auto mb-3"
+                  />
+                  {/* <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
                   {item.title}
-                </h2>
-                <ul>
-                  {item.description.map((desc: any, index: number) => (
-                    <li key={index} className="text-[10px]">
-                      {desc}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Card>
-          ))}
-          renderPrevButton={() => PrevArrow}
-          renderNextButton={() => NextArrow}
-        />
+                </h2> */}
+                  <Dropdown heading={item.title} listItems={item.description} />
+                  <ul className="mt-[20%] px-5">
+                    {item.description.map((desc: any, index: number) => (
+                      <li key={index} className="text-[10px]">
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Card>
+            ))}
+            renderPrevButton={() => PrevArrow}
+            renderNextButton={() => NextArrow}
+          />
+        </div>
       </div>
     </div>
   );

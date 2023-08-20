@@ -13,7 +13,7 @@ const Header = () => {
     return classes.filter(Boolean).join(" ");
   };
 
-  const searchString = "/partners"; 
+  const searchString = "/partners";
   const includesString = router.asPath.includes(searchString);
 
   return (
@@ -102,7 +102,12 @@ const Header = () => {
       {/* small screen Nav */}
       <nav className="flex justify-between  items-center lg:hidden px-4 py-[24px]">
         <div>
-          <Image src="/assets/logo_v2.png" width={154} height={51} alt="logo" />
+          <Image
+            src="/assets/responsiveLogo.png"
+            width={154}
+            height={51}
+            alt="logo"
+          />
         </div>
         <Menu as="div" className="relative inline-block text-left">
           <div>
