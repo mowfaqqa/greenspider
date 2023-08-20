@@ -109,7 +109,7 @@ const Activities = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[250px] lg:max-w-[1440px] mx-auto">
+      <div className="max-w-[250px] md:max-w-[1440px] mx-auto">
         <div className="swiper-container mt-[60vh] pb-[10%] lg:mt-[5%] lg:px-[75px] px-3">
           <AliceCarousel
             disableDotsControls
@@ -157,62 +157,62 @@ const Items = [
     img: "/icons/logo-1.svg",
     title: "DRYLAND MANAGEMENT AND LAND RESTORATION",
     description: [
-      "Dryland Afforestation and Landscape Restoration",
-      " Sand Dune Fixation and Sand Storm Management",
-      "Oasis Rehabilitation and Management",
+      "• Dryland Afforestation and Landscape Restoration",
+      "• Sand Dune Fixation and Sand Storm Management",
+      "• Oasis Rehabilitation and Management",
     ],
   },
   {
     img: "/icons/logo-2.svg",
     title: "ENVIRONMENTAL IMPACT MANAGEMENT",
     description: [
-      " Environmental Impact Assessment (EIA)",
-      " Environmental Monitoring and Auditing",
-      " Environmental Management Plan (EMP)",
+      "• Environmental Impact Assessment (EIA)",
+      "• Environmental Monitoring and Auditing",
+      "• Environmental Management Plan (EMP)",
     ],
   },
   {
     img: "/icons/logo-3.svg",
     title: "SOIL AND WATER MANAGEMENT",
     description: [
-      "Soil Survey and Analysis",
-      " Soil Classification and suitability Mapping",
-      " Erosion Control Plan",
+      "• Soil Survey and Analysis",
+      "• Soil Classification and suitability Mapping",
+      "• Erosion Control Plan",
     ],
   },
   {
     img: "/icons/logo-4.svg",
     title: "ECOLOGICAL SERVICES",
     description: [
-      " Ecological Rehabilitation Plan",
-      " Conservation Management Plan",
-      "Invasive Species Management Plan",
+      "• Ecological Rehabilitation Plan",
+      "• Conservation Management Plan",
+      "• Invasive Species Management Plan",
     ],
   },
   {
     img: "/icons/logo-5.jpg",
     title: "WASTE MANAGEMENT",
     description: [
-      " Pollution Management and Ccontrol",
-      " Solid Waste Management",
+      "• Pollution Management and Ccontrol",
+      "• Solid Waste Management",
     ],
   },
   {
     img: "/icons/logo-6.jpg",
     title: "SPECIALIZED ENVIROMENTAL SERVICES",
     description: [
-      " Air Quality Assessment",
-      " Climate Change Management",
-      "Environmental Risk Assessment",
+      "• Air Quality Assessment",
+      "• Climate Change Management",
+      "• Environmental Risk Assessment",
     ],
   },
   {
     img: "/icons/logo-7.jpg",
     title: "COMMUNITY MOBILIZATION AND TRAINING",
     description: [
-      " Development of Public Mobilization and Communication Strategy",
-      " Stakeholder Engagement",
-      "Extension Services and Training",
+      "• Development of Public Mobilization and Communication Strategy",
+      "• Stakeholder Engagement",
+      "• Extension Services and Training",
     ],
   },
 ];

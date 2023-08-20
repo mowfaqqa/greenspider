@@ -8,6 +8,7 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Seo from "@/components/Seo";
 
 export default function Home() {
   const router = useRouter();
@@ -53,6 +54,11 @@ export default function Home() {
 
   return (
     <>
+    <Seo 
+    title="Home Page"
+    description="The official landing page of greenspider website"
+    canonical="www.greenspider.com.ng"
+    />
       <main>
         {/* large screen Nav */}
         <nav className="hidden max-w-[1440px] mx-auto lg:flex justify-center items-center py-[54px]">
