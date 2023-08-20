@@ -64,8 +64,8 @@ const Activities = () => {
                 alt="activities"
               />
             </div>
-            <div className=" absolute lg:top-[103%] lg:left-[24%] h-[40px] hidden lg:block w-[40px] bg-primary-main rounded-br-[7px]" />
-            <div className="absolute lg:top-[60%] lg:left-[24%]">
+            <div className=" absolute lg:top-[120%] lg:left-[24%] h-[40px] hidden lg:block w-[40px] bg-primary-main rounded-br-[7px]" />
+            <div className="absolute lg:top-[80%] lg:left-[24%]">
               <Image
                 src="/images/activities-img-3.svg"
                 width={291}
@@ -73,7 +73,7 @@ const Activities = () => {
                 alt="activities"
               />
             </div>
-            <div className=" absolute lg:top-[73%] lg:left-[62%] h-[40px] w-[40px] bg-primary-main rounded-br-[7px]" />
+            <div className=" absolute lg:top-[94%] lg:left-[62%] h-[40px] w-[40px] bg-primary-main rounded-br-[7px]" />
           </div>
           <div className="block md:hidden">
             <div className="absolute top-[44%] left-[0%]">
