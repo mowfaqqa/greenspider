@@ -1,15 +1,8 @@
 import { Card } from "@/components/Card";
-import Carousel from "@/components/Carousel";
 import Header from "@/components/Header";
 import Image from "next/image";
 import React from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
