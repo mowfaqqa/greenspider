@@ -8,6 +8,11 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Dropdown from "@/components/Dropdown";
 
+// images
+import activityImg1 from '@/images/activities-img1.png'
+import activityImg2 from '@/images/activities-img-2.svg'
+import activityImg3 from '@/images/activities-img3.png'
+
 const Activities = () => {
   const responsive = {
     0: { items: 1 },
@@ -42,25 +47,25 @@ const Activities = () => {
           <div className="hidden lg:block relative">
             <div className="absolute lg:top-[32%]">
               <Image
-                src="/images/activities-img-1.svg"
+                src={activityImg1}
                 width={251}
                 height={168}
                 alt="activities"
               />
             </div>
-            <div className="absolute lg:top-[23%] lg:left-[24%] h-[40px] w-[40px] bg-primary-main rounded-br-[7px]" />
+            <div className="absolute lg:top-[20%] lg:left-[24%] h-[40px] w-[40px] bg-primary-main rounded-br-[7px]" />
             <div className="absolute lg:-top-[15%] lg:left-[23%]">
               <Image
-                src="/images/activities-img-2.svg"
+                src={activityImg2}
                 width={375}
                 height={211}
                 alt="activities"
               />
             </div>
-            <div className=" absolute lg:top-[120%] lg:left-[24%] h-[40px] hidden lg:block w-[40px] bg-primary-main rounded-br-[7px]" />
+            <div className=" absolute lg:top-[119%] lg:left-[24%] h-[40px] hidden lg:block w-[40px] bg-primary-main rounded-br-[7px]" />
             <div className="absolute lg:top-[80%] lg:left-[24%]">
               <Image
-                src="/images/activities-img-3.svg"
+                src={activityImg3}
                 width={291}
                 height={252}
                 alt="activities"
@@ -71,7 +76,7 @@ const Activities = () => {
           <div className="block md:hidden">
             <div className="absolute top-[44%] left-[0%]">
               <Image
-                src="/images/activities-img1.png"
+                src={activityImg1}
                 width={116.32}
                 height={77.56}
                 alt="activities"
@@ -81,7 +86,7 @@ const Activities = () => {
             <div className="absolute top-[43.8%] left-[39%] h-[18px] w-[18px] bg-primary-main rounded-br-[7px]" />
             <div className="absolute top-[38%] left-[36%]">
               <Image
-                src="/images/activities-img-2.svg"
+                src={activityImg2}
                 width={173.58}
                 height={97.64}
                 alt="activities"
@@ -91,7 +96,7 @@ const Activities = () => {
 
             <div className="absolute top-[56%] left-[36%]">
               <Image
-                src="/images/activities-img3.png"
+                src={activityImg3}
                 width={134.34}
                 height={116.34}
                 alt="activities"

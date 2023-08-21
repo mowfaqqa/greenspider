@@ -1,16 +1,9 @@
-import { DefaultSeo } from "next-seo";
 import Head from "next/head";
 import React from "react";
 
 const Seo = ({ title, description, canonical, openGraph }: any) => {
   return (
     <>
-      <DefaultSeo
-        title={title}
-        description={description}
-        canonical={canonical}
-        // openGraph={openGraph}
-      />
       <Head>
         <title>Greenspider</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
