@@ -9,9 +9,9 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Dropdown from "@/components/Dropdown";
 
 // images
-import activityImg1 from '@/images/activities-img1.png'
-import activityImg2 from '@/images/activities-img-2.svg'
-import activityImg3 from '@/images/activities-img3.png'
+import activityImg1 from "@/images/activities-img1.png";
+import activityImg2 from "@/images/activities-img-2.svg";
+import activityImg3 from "@/images/activities-img3.png";
 
 const Activities = () => {
   const responsive = {
@@ -112,33 +112,39 @@ const Activities = () => {
           <AliceCarousel
             disableDotsControls
             responsive={responsive}
-            items={Items.map((item: any, index: number) => (
-              <Card
-                key={index}
-                className={`carousel-item w-[200px] lg:w-[253px] mb-4 h-[269px] mt-5 flex-col border border-primary-main shadow-lg`}
-              >
-                <div className="flex flex-col">
-                  <Image
-                    src={item.img}
-                    width={30}
-                    height={30}
-                    alt="icon"
-                    className="block mx-auto mb-3"
-                  />
-                  {/* <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
+            items={Items.map((item: any, index: number) => {
+              const firstThreeItems = item?.description.slice(0, 3);
+              return (
+                <Card
+                  key={index}
+                  className={`carousel-item w-[200px] lg:w-[253px] mb-4 h-[269px] mt-5 flex-col border border-primary-main shadow-lg`}
+                >
+                  <div className="flex flex-col">
+                    <Image
+                      src={item.img}
+                      width={30}
+                      height={30}
+                      alt="icon"
+                      className="block mx-auto mb-3"
+                    />
+                    {/* <h2 className="lg:w-[187px] text-primary-main text-sm lg:text-base font-medium">
                   {item.title}
                 </h2> */}
-                  <Dropdown heading={item.title} listItems={item.description} />
-                  <ul className="mt-[20%] px-5">
-                    {item.description.map((desc: any, index: number) => (
-                      <li key={index} className="text-[10px]">
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Card>
-            ))}
+                    <Dropdown
+                      heading={item.title}
+                      listItems={item.description}
+                    />
+                    <ul className="mt-[20%] px-5">
+                      {firstThreeItems.map((desc: any, index: number) => (
+                        <li key={index} className="text-[10px]">
+                          {desc}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Card>
+              );
+            })}
             renderPrevButton={() => PrevArrow}
             renderNextButton={() => NextArrow}
           />
@@ -158,6 +164,9 @@ const Items = [
       "• Dryland Afforestation and Landscape Restoration",
       "• Sand Dune Fixation and Sand Storm Management",
       "• Oasis Rehabilitation and Management",
+      "• Dryland Agricultural Development",
+      "• Dryland Riparian Zone and Wetland Conservation and Management",
+      "• Drought and Desertification Vulnerability and Sensitivity mapping",
     ],
   },
   {
@@ -167,6 +176,9 @@ const Items = [
       "• Environmental Impact Assessment (EIA)",
       "• Environmental Monitoring and Auditing",
       "• Environmental Management Plan (EMP)",
+      "• Environmental Management during Construction",
+      "• Environmental Risk Assessment Studies (ERS)",
+      "• Facilitation of Public Participation Process (PPP)",
     ],
   },
   {
@@ -176,6 +188,10 @@ const Items = [
       "• Soil Survey and Analysis",
       "• Soil Classification and suitability Mapping",
       "• Erosion Control Plan",
+      "• Soil Erosion Risk Assessment",
+      "• Biological and Physical Soil Erosion and Flood Control",
+      "• Ground Water Investigation",
+      "• Water Resources and Quality Control Management",
     ],
   },
   {
@@ -185,6 +201,9 @@ const Items = [
       "• Ecological Rehabilitation Plan",
       "• Conservation Management Plan",
       "• Invasive Species Management Plan",
+      "• Wetland and Watercourse Delineation",
+      "• Transboundary Watershed Management",
+      "• Rangeland Management",
     ],
   },
   {
@@ -202,6 +221,16 @@ const Items = [
       "• Air Quality Assessment",
       "• Climate Change Management",
       "• Environmental Risk Assessment",
+      "• Geo-Hydrological Assessment",
+      "• Geological and Topographic Mapping",
+      "• Urban Planning and Smart City Development",
+      "• Socio-Economic Impact Assessment",
+      "• Flora and Fauna Survey",
+      "• GIS and Remote Sensing",
+      "• Landuse Mapping and Planning",
+      "• Biophysical and Socio-Economic Baseline Survey",
+      "• Computer Modelling",
+      "• Alternative and Renewable Energy",
     ],
   },
   {
