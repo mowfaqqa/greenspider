@@ -78,7 +78,7 @@ const Activities = () => {
           <div className="block md:hidden">
             <div className="absolute top-[44%] left-[0%]">
               <Image
-                src="/images/activities-img-1.svg"
+                src="/images/activities-img1.png"
                 width={116.32}
                 height={77.56}
                 alt="activities"
@@ -98,7 +98,7 @@ const Activities = () => {
 
             <div className="absolute top-[56%] left-[36%]">
               <Image
-                src="/images/activities-img-3.svg"
+                src="/images/activities-img3.png"
                 width={134.34}
                 height={116.34}
                 alt="activities"
