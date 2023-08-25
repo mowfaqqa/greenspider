@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -67,6 +68,7 @@ const Partners = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

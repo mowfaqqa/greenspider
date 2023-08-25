@@ -12,6 +12,7 @@ import Dropdown from "@/components/Dropdown";
 import activityImg1 from "@/images/activities-img1.png";
 import activityImg2 from "@/images/activities-img-2.svg";
 import activityImg3 from "@/images/activities-img3.png";
+import Footer from "@/components/Footer";
 
 const Activities = () => {
   const responsive = {
@@ -30,9 +31,9 @@ const Activities = () => {
     </button>
   );
   return (
-    <div className="pb-[3rem]">
+    <div>
       <Header />
-      <div className="lg:py-[121px] lg:max-w-[1440px] mx-auto lg:px-[75px] px-5 text-primary-main">
+      <div className="pb-[3rem] lg:py-[121px] lg:max-w-[1440px] mx-auto lg:px-[75px] px-5 text-primary-main">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="">
             <h3 className="text-lg font-bold lg:text-[40px] mb-8">
@@ -150,6 +151,7 @@ const Activities = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { PPSData } from "@/utils/PartnerData";
 import Image from "next/image";
@@ -11,9 +12,9 @@ const PPSDetails = () => {
   const ppsDetail = PPSData?.find((obj: any) => obj.id === ppsId);
 
   return (
-    <div className="lg:pb-[100px]">
+    <div className="">
       <Header />
-      <div className="lg:max-w-[1440px] mx-auto lg:px-[75px] text-primary-main lg:mt-[130px]">
+      <div className="lg:max-w-[1440px] lg:pb-[80px] mx-auto lg:px-[75px] text-primary-main lg:mt-[130px]">
         <div className="relative grid grid-cols-3 mt-[104px] px-4">
           <div className="col-span-2 ">
             <div className=" flex items-center">
@@ -76,6 +77,7 @@ const PPSDetails = () => {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

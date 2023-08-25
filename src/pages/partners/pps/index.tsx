@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { PPSData } from "@/utils/PartnerData";
 import Image from "next/image";
@@ -11,7 +12,10 @@ const PPS = () => {
       <Header />
       <div className="lg:max-w-[1440px] mx-auto lg:px-[75px] text-primary-main lg:mt-[130px]">
         {PPSData.map((data, index) => (
-          <div key={index} className="relative grid grid-cols-3 mt-[76px] lg:mt-[192px] px-5">
+          <div
+            key={index}
+            className="relative grid grid-cols-3 mt-[76px] lg:mt-[192px] px-5"
+          >
             <div className="col-span-2 ">
               <div className=" flex items-center">
                 <div className="bg-secondary-main h-[60px] w-[11px]" />
@@ -62,6 +66,7 @@ const PPS = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { TechnicalExpertsData } from "@/utils/TechnicalExperts";
 import Image from "next/image";
@@ -61,6 +62,7 @@ const TechnicalExperts = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
