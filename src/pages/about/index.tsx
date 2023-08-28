@@ -32,9 +32,9 @@ const About = () => {
           About Us
         </h1>
         <p className="md:text-xl font-medium md:font-semibold">
-          Green Spider Consult (GSC) is a leading Nigerian environmental
-          consulting firm incorporated in 2020 to provide a wide range of
-          environmental services. <br />
+          Green Spider Consult (GSC) is a Nigerian environmental consulting firm
+          incorporated in 2020 to provide a wide range of environmental
+          services. <br />
           Excellent environmental outcomes are fundamental pillars supporting
           GSC’s day-to-day work. While, GSC is particularly adroit at evolving
           synergistic teams and alliance to provide sustainable, innovative and
@@ -59,9 +59,9 @@ const About = () => {
           <div className="lg:w-[631px]">
             <h3 className="text-lg font-bold lg:text-[40px] mb-3">Vision</h3>
             <p className="md:font-semibold md:text-[24px]">
-              Our vision is to provide excellent and highest quality
-              environmental services to an array of clients without compromising
-              high degree of professional ethics and core values.
+              To provide excellent and highest quality environmental services to
+              an array of clients without compromising high degree of
+              professional ethics and core values.
             </p>
           </div>
         </div>
@@ -76,8 +76,8 @@ const About = () => {
           <div className="md:pl-[60px] md:pr-[100px]">
             <h3 className="text-lg font-bold lg:text-[40px] mb-3">Mission</h3>
             <p className="md:font-semibold md:text-[24px]">
-              Our mission is to contribute towards resolving the prevailing
-              Global Environmental Challenges through the provision of excellent
+              To contribute towards resolving the prevailing Global
+              Environmental Challenges through the provision of excellent
               services toclients anchored on best-proven technology and
               strategy.
             </p>
