@@ -12,6 +12,9 @@ const Footer = () => {
       <p className="text-xs md:text-base text-black">
         Email: greenspiderconsult@gmail.com
       </p>
+      <p className="text-xs md:text-base text-black">
+        Phone Number: +2348035892288
+      </p>
     </div>
   );
 };
