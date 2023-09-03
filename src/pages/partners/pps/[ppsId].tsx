@@ -28,7 +28,7 @@ const PPSDetails = () => {
                 </span>
               </div>
             </div>
-            <p className="font-medium text-lg w-[338px] lg:w-full mx-4 pr-4 text-justify mt-[60px]">
+            <p className="font-medium text-lg w-[338px] lg:w-full mx-4 pr-4 mt-[60px]">
               {ppsDetail?.desc}
             </p>
           </div>
@@ -57,9 +57,14 @@ const PPSDetails = () => {
             </div>
           </div>
         </div>
-        <div className="font-medium text-lg w-[338px] lg:w-full mx-4 px-3 text-justify mt-5 lg:mt-[140px]">
+        <div className="font-medium text-lg w-[338px] lg:w-full mx-4 px-3 mt-5 lg:mt-[140px]">
           {ppsDetail?.further_desc}
         </div>
+        {ppsDetail?.extra !== "" && (
+          <div className="font-medium text-lg w-[338px] lg:w-full mx-4 px-3 mt-5 lg:mt-[40px]">
+            {ppsDetail?.extra}
+          </div>
+        )}
         <div className="flex justify-between items-center mt-8 px-5 pb-5">
           <button
             onClick={() => router.back()}
@@ -73,7 +78,7 @@ const PPSDetails = () => {
             className="flex items-center text-black text-[23px] lg:text-[40px] font-semibold"
           >
             {" "}
-            Next <ArrowRight className="text-[23px] lg:text-[40px]"/> 
+            Next <ArrowRight className="text-[23px] lg:text-[40px]" />
           </button>
         </div>
       </div>
