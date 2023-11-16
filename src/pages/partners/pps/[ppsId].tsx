@@ -29,6 +29,9 @@ const PPSDetails = () => {
               </div>
             </div>
             <p className="font-medium text-lg w-[338px] lg:w-full mx-4 pr-4 mt-[60px]">
+              {ppsDetail?.summary}
+            </p>
+            <p className="font-medium text-lg w-[338px] lg:w-full mx-4 pr-4 mt-[60px]">
               {ppsDetail?.desc}
             </p>
           </div>
